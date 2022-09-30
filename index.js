@@ -37,7 +37,8 @@ app.use((err, req, res, next) => {
   }
 
  app.get('/', (req, res) => {
-    
+
+    random();
     res.send(`Your Random Number: ${number}`)
 
  });
