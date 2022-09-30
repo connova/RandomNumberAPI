@@ -26,18 +26,19 @@ app.use((err, req, res, next) => {
     );
   });
 
+  var number;
+
   async function random() {
 
-    return Math.floor(
+    number = Math.floor(
         Math.random() * (10000000)
     );
 
   }
 
  app.get('/', (req, res) => {
-
-    console.log(random())
-    res.send('Hello World')
+    
+    res.send(`Your Random Number: ${number}`)
 
  });
 
